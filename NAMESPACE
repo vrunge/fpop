@@ -1,0 +1,5 @@
+useDynLib(fpop, .registration = TRUE)
+
+export(fpop)
+
+importFrom(Rcpp, evalCpp)

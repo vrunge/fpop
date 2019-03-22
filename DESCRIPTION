@@ -1,0 +1,17 @@
+Package: fpop
+Type: Package
+Title: Different implementation of the fpop algorithm
+Version: 0.1.2
+Author: Vincent Runge
+Maintainer: Vincent Runge <vincent.runge@univ-evry.fr>
+Description: challenge difference implementation of the fpop algorithm
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: Rcpp (>= 0.12.18)
+LinkingTo: Rcpp
+RoxygenNote: 6.1.0
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
+SystemRequirements: C++11
