@@ -93,7 +93,7 @@ We install the package from Github:
 library(fpop)
 ```
 
-We choose a data length and a standard penalty value
+We choose a data length and a penalty value
 
 ```r
 n <- 2000
