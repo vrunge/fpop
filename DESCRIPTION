@@ -1,10 +1,10 @@
 Package: fpop
 Type: Package
-Title: Different implementation of the fpop algorithm
+Title: efficient implementation of the fpop algorithm
 Version: 0.1.2
 Author: Vincent Runge
 Maintainer: Vincent Runge <vincent.runge@univ-evry.fr>
-Description: challenge difference implementation of the fpop algorithm
+Description: efficient implementation of the fpop algorithm with different cost functions. The following costs are available : mean, variance, poisson, exp, binomial.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

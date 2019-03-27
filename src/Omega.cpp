@@ -102,3 +102,5 @@ void Omega::algo(std::vector< double >& vectData)
   ms = NULL;
 
 }
+
+

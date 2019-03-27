@@ -24,7 +24,6 @@ class Piece
     void addDataPoint(double& y, Track& track);
     Piece* cut(double level, double currentArgmin, bool Delta);
 
-
     Piece* ProcessNxt(Interval& interRoots, double& level, int& type);
 
     void show();
