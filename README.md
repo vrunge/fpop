@@ -37,7 +37,7 @@ Change in mean:
 
 <p align="center"><img src="/tex/fffcde56d44d0088c63ec7f5f1443c3f.svg?invert_in_darkmode&sanitize=true" align=middle width=158.25197025pt height=18.312383099999998pt/></p>
 
-Change in variance / change in Poisson or exponential distribtion :
+Change in variance / change in Poisson or exponential distribution :
 
 <p align="center"><img src="/tex/aaf7c18bae591dd9981618e5d7193d28.svg?invert_in_darkmode&sanitize=true" align=middle width=187.63551345pt height=16.438356pt/></p>
 
@@ -55,7 +55,7 @@ Change in variance :
 
 <p align="center"><img src="/tex/355b2841c20631d746ffa6a05b4a41aa.svg?invert_in_darkmode&sanitize=true" align=middle width=158.23657244999998pt height=18.312383099999998pt/></p>
 
-In this case, data a centered and data points <img src="/tex/aeeadff394a47eb25004f564c74ed751.svg?invert_in_darkmode&sanitize=true" align=middle width=43.66906829999999pt height=21.18721440000001pt/> are replaced by <img src="/tex/31dfd4fcc5fae583745a58bb17f8a473.svg?invert_in_darkmode&sanitize=true" align=middle width=42.12224939999999pt height=14.15524440000002pt/> with <img src="/tex/6f0d4c93d5e4c97f2a254622a0c64540.svg?invert_in_darkmode&sanitize=true" align=middle width=68.40755624999998pt height=26.76175259999998pt/>. The algorithm returns <img src="/tex/bdf4d2f04320c1f3fd24b8115a106321.svg?invert_in_darkmode&sanitize=true" align=middle width=51.287539049999985pt height=27.77565449999998pt/>, the standard deviation which is into the range of values <img src="/tex/2546a5b3fd7ffe4a3bb8929f05031c3f.svg?invert_in_darkmode&sanitize=true" align=middle width=52.33455975pt height=24.65753399999998pt/>.
+In this case, data is centered and data points <img src="/tex/aeeadff394a47eb25004f564c74ed751.svg?invert_in_darkmode&sanitize=true" align=middle width=43.66906829999999pt height=21.18721440000001pt/> replaced by <img src="/tex/31dfd4fcc5fae583745a58bb17f8a473.svg?invert_in_darkmode&sanitize=true" align=middle width=42.12224939999999pt height=14.15524440000002pt/> with <img src="/tex/6f0d4c93d5e4c97f2a254622a0c64540.svg?invert_in_darkmode&sanitize=true" align=middle width=68.40755624999998pt height=26.76175259999998pt/>. The algorithm returns <img src="/tex/bdf4d2f04320c1f3fd24b8115a106321.svg?invert_in_darkmode&sanitize=true" align=middle width=51.287539049999985pt height=27.77565449999998pt/>, the standard deviation which is now into the range of values <img src="/tex/2546a5b3fd7ffe4a3bb8929f05031c3f.svg?invert_in_darkmode&sanitize=true" align=middle width=52.33455975pt height=24.65753399999998pt/>.
 
 
 Change in Poisson distribution :
@@ -70,9 +70,9 @@ with the restriction that <img src="/tex/835160c38364cb49de65a8f867bd01a7.svg?in
 
 Change in negative binomial distribution:
 
-<p align="center"><img src="/tex/7bc93e7a79b8cb10987e37e3d1cdde35.svg?invert_in_darkmode&sanitize=true" align=middle width=212.76086039999998pt height=16.438356pt/></p>
+<p align="center"><img src="/tex/96d6b91abd5528bfd9366c73b4d3f162.svg?invert_in_darkmode&sanitize=true" align=middle width=228.71594954999998pt height=16.438356pt/></p>
 
-To use this cost we need to estimate the dispersion parameter <img src="/tex/f50853d41be7d55874e952eb0d80c53e.svg?invert_in_darkmode&sanitize=true" align=middle width=9.794543549999991pt height=22.831056599999986pt/> and reduce the data <img src="/tex/c36ec8a3091d8d3161307d4776dc5f2c.svg?invert_in_darkmode&sanitize=true" align=middle width=60.88276589999998pt height=24.65753399999998pt/>.
+To use this cost we need to estimate the dispersion parameter <img src="/tex/f50853d41be7d55874e952eb0d80c53e.svg?invert_in_darkmode&sanitize=true" align=middle width=9.794543549999991pt height=22.831056599999986pt/> and to reduce the data <img src="/tex/c36ec8a3091d8d3161307d4776dc5f2c.svg?invert_in_darkmode&sanitize=true" align=middle width=60.88276589999998pt height=24.65753399999998pt/>.
 The points <img src="/tex/aeeadff394a47eb25004f564c74ed751.svg?invert_in_darkmode&sanitize=true" align=middle width=43.66906829999999pt height=21.18721440000001pt/> are replaced by <img src="/tex/58de7d1f63716d08fa779ae10f0e2bd9.svg?invert_in_darkmode&sanitize=true" align=middle width=59.72793914999999pt height=22.853275500000024pt/> to constrain the probability <img src="/tex/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width=8.270567249999992pt height=14.15524440000002pt/> into <img src="/tex/4d43f62a3d7f50890bf044f4d77532c5.svg?invert_in_darkmode&sanitize=true" align=middle width=59.64033239999999pt height=24.65753399999998pt/>.
 
 The estiamation of <img src="/tex/f50853d41be7d55874e952eb0d80c53e.svg?invert_in_darkmode&sanitize=true" align=middle width=9.794543549999991pt height=22.831056599999986pt/> is given by
