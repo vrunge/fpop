@@ -37,7 +37,7 @@ Change in mean:
 
 $$C(\theta) = A \theta^2 + B \theta + C$$
 
-Change in variance / change in Poisson or exponential distribtion :
+Change in variance / change in Poisson or exponential distribution :
 
 $$C(\theta) = A \theta - B \log(\theta) + C$$
 
@@ -55,7 +55,7 @@ Change in variance :
 
 $$C(\theta, y)  = y^2 \theta - \log(\theta)$$
 
-In this case, data a centered and data points $y_i = 0$ are replaced by $y_i = \epsilon$ with $\epsilon = 10^{-12}$. The algorithm returns $\sigma = \frac{1}{\sqrt{\theta}}$, the standard deviation which is into the range of values $[\epsilon, +\infty[$.
+In this case, data is centered and data points $y_i = 0$ replaced by $y_i = \epsilon$ with $\epsilon = 10^{-12}$. The algorithm returns $\sigma = \frac{1}{\sqrt{\theta}}$, the standard deviation which is now into the range of values $[\epsilon, +\infty[$.
 
 
 Change in Poisson distribution :
@@ -70,9 +70,9 @@ with the restriction that $y_i > 0$ for all data points.
 
 Change in negative binomial distribution:
 
-$$C(\theta) = - y \log(\theta) - \log(1-\theta)$$
+$$C(\theta, y) = - y \log(\theta) - \log(1-\theta)$$
 
-To use this cost we need to estimate the dispersion parameter $\phi$ and reduce the data $y \leftarrow y / \phi$.
+To use this cost we need to estimate the dispersion parameter $\phi$ and to reduce the data $y \leftarrow y / \phi$.
 The points $y_i = 0$ are replaced by $y_i = \frac{\epsilon}{1 - \epsilon}$ to constrain the probability $p$ into $[0, 1- \epsilon]$.
 
 The estiamation of $\phi$ is given by
