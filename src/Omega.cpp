@@ -41,7 +41,6 @@ void Omega::algo(std::vector< double >& vectData)
   int* chpts = new int[n]; ///vector of changepoints build by fpop
   double* ms = new double[n]; ///vector of means build by fpop
 
-  //std::cout << "ALGOALGOALGOALGOALGOALGOALGOALGOALGOALGOALGOALGOALGO   "<< 0 << std::endl;
   ///
   /// FIRST STEP
   ///
@@ -56,27 +55,17 @@ void Omega::algo(std::vector< double >& vectData)
   bool Delta; /// argminimum - vectData[i] > 0
   for(unsigned int i = 1; i < n; i++)
   {
-    //std::cout << "ALGOALGOALGOALGOALGOALGOALGOALGOALGOALGOALGOALGOALGO   "<< i << std::endl;
     if(track.getArgminimum() - vectData[i] > 0){Delta = true;}else{Delta = false;}
 
     functionalCost = functionalCost -> cut(track.getMinimum() + penalty, track.getArgminimum(), Delta);
-    //functionalCost -> show();
     functionalCost -> addDataPoint(vectData[i], track); /// + update track
 
     ///
     chpts[i] = i - track.getNbSteps();
     ms[i] = track.getArgminimum();
-    //std::cout <<  ms[i] << " -- " << chpts[i] << " --- " << Delta << std::endl;
   }
-
-  //std::cout << "ALGOALGOALGOALGOALGOALGOALGOALGOALGOALGOALGOALGOALGO   "<< n << std::endl;
 
   globalCost = track.getMinimum() - penalty;
-
-  for(int i = 0; i < n; i++)
-  {
- //   std::cout << chpts[i] << " --- " << ms[i] << std::endl;
-  }
 
   ///backtracking
   int tau = n - 1;
@@ -88,13 +77,8 @@ void Omega::algo(std::vector< double >& vectData)
     tau = chpts[tau];
   }
 
-  //std::cout << "reverse" << std::endl;
-
   std::reverse(changepoints.begin(), changepoints.end());
   std::reverse(means.begin(), means.end());
-
-  //std::cout << "ENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDEND" << std::endl;
-
 
   delete[] chpts;
   chpts = NULL;
