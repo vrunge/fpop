@@ -3,6 +3,8 @@
 #include "Piece.h"
 #include "Track.h"
 
+#include "ExternFunctions.h"
+
 #include <algorithm>    // std::reverse
 #include<iostream>
 #include <stdlib.h>
@@ -55,7 +57,7 @@ void Omega::algo(std::vector< double >& vectData)
   bool Delta; /// argminimum - vectData[i] > 0
   for(unsigned int i = 1; i < n; i++)
   {
-    if(track.getArgminimum() - vectData[i] > 0){Delta = true;}else{Delta = false;}
+    if(track.getArgminimum() - cost_argmin(Cost(cost_coeff(vectData[i]))) > 0){Delta = true;}else{Delta = false;}
 
     functionalCost = functionalCost -> cut(track.getMinimum() + penalty, track.getArgminimum(), Delta);
     functionalCost -> addDataPoint(vectData[i], track); /// + update track
