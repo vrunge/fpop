@@ -55,13 +55,23 @@ List fpop(std::vector<double> vectData, double penalty, std::string change = "me
 
   if(change == "negbin")
   {
+    int windowSize = 100;
+    int k = vectData.size() / windowSize;
     double mean = 0;
-    for(int i = 0; i < vectData.size(); i++){mean = mean + vectData[i];}
-    mean = mean/vectData.size();
     double variance = 0;
-    for(int i = 0; i < vectData.size(); i++){variance = variance + (vectData[i] - mean) * (vectData[i] - mean);}
-    variance = variance/(vectData.size() - 1);
-    double disp = mean * mean / (variance - mean);
+    double disp = 0;
+
+    for(int j = 0; j < k; j++)
+    {
+      mean = 0;
+      variance = 0;
+      for(int i = j * windowSize; i < (j + 1)*windowSize; i++){mean = mean + vectData[i];}
+      mean = mean/windowSize;
+      for(int i =  j * windowSize; i < (j + 1)*windowSize; i++){variance = variance + (vectData[i] - mean) * (vectData[i] - mean);}
+      variance = variance/(windowSize - 1);
+      disp = disp  + (mean * mean / (variance - mean));
+    }
+    disp = disp/k;
     for(int i = 0; i < vectData.size(); i++){vectData[i] = vectData[i]/disp; if(vectData[i] == 0){vectData[i] = epsilon/(1- epsilon);}}
   }
 
